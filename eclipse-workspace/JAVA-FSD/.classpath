@@ -10,5 +10,7 @@
 	<classpathentry kind="src" path="ObjectsUsage"/>
 	<classpathentry kind="src" path="MethodOverriding"/>
 	<classpathentry kind="src" path="NestedClass"/>
+	<classpathentry kind="src" path="Constructor"/>
+	<classpathentry kind="src" path="Inheritance"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
