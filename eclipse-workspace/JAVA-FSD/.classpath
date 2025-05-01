@@ -12,5 +12,10 @@
 	<classpathentry kind="src" path="NestedClass"/>
 	<classpathentry kind="src" path="Constructor"/>
 	<classpathentry kind="src" path="Inheritance"/>
+	<classpathentry kind="src" path="Inheritance-WithChildreferenceandchildobjects"/>
+	<classpathentry kind="src" path="Inheritance-WithParentreferenceandChildobjetcs"/>
+	<classpathentry kind="src" path="Abstraction"/>
+	<classpathentry kind="src" path="Encapsulation"/>
+	<classpathentry kind="src" path="Polymorphisim"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
