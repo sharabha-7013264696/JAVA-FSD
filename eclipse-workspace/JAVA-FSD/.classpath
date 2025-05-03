@@ -17,5 +17,6 @@
 	<classpathentry kind="src" path="Abstraction"/>
 	<classpathentry kind="src" path="Encapsulation"/>
 	<classpathentry kind="src" path="Polymorphisim"/>
+	<classpathentry kind="src" path="Exception"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
