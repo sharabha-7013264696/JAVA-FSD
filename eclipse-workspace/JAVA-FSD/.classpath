@@ -22,5 +22,8 @@
 	<classpathentry kind="src" path="Even_Number_Check"/>
 	<classpathentry kind="src" path="PrimeNumberCheck"/>
 	<classpathentry kind="src" path="Fibonaaci"/>
+	<classpathentry kind="src" path="Palindrome"/>
+	<classpathentry kind="src" path="SumOfdigits"/>
+	<classpathentry kind="src" path="ArmstrongNumber"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
