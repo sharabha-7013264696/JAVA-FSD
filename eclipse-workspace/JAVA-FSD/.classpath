@@ -25,5 +25,6 @@
 	<classpathentry kind="src" path="Palindrome"/>
 	<classpathentry kind="src" path="SumOfdigits"/>
 	<classpathentry kind="src" path="ArmstrongNumber"/>
+	<classpathentry kind="src" path="MAP_PROGRAMS"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
