@@ -41,18 +41,18 @@ public class FrequencyCalculation {
 		FrequencyCalculation f=new FrequencyCalculation(1,"name");
 		System.out.println(f.hashCode());
 		System.out.println(f);
-		List<Integer> li=new ArrayList<Integer>();
-		li.add(1);
-		li.add(2);
-		li.add(1);
-		li.add(3);
-		li.add(3);
-		for(Integer num:li) {
+		List<Character> li=new ArrayList<Character>();
+		li.add('a');
+		li.add('b');
+		li.add('a');
+		li.add('c');
+		li.add('d');
+		for(char num:li) {
 			System.out.println(num);
 		}
 		System.out.println(li);
-		Map<Integer,Integer> m=new HashMap<Integer,Integer>();
-		for(int a:li) {
+		Map<Character,Integer> m=new HashMap<Character,Integer>();
+		for(char a:li) {
 			if(m.containsKey(a)) {
 				int count=m.get(a);
 				m.put(a, count+1);
@@ -61,12 +61,17 @@ public class FrequencyCalculation {
 				m.put(a,1);
 			}
 		}
-		for(int b:m.keySet()) {
+		System.out.println(m.keySet());
+		for(char b:m.keySet()) {
+			System.out.println(b+":"+m.get(b));
 			if(m.get(b)==1) {
 				System.out.println(b+":"+m.get(b));
 			}
 			
 		}
+		System.out.println(m.keySet());
+		System.out.println(m.values());
+		System.out.println(m.remove('d'));
 		
 	}
 
