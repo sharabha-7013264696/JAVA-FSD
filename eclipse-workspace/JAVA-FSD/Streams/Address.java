@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class Address {
 	int pincode;
@@ -16,6 +17,25 @@ public class Address {
 	}
 	public Address() {
 		
+	}
+	@Override
+	public String toString() {
+		return "Address [pincode=" + pincode + ", city=" + city + "]";
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(city, pincode);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Address other = (Address) obj;
+		return Objects.equals(city, other.city) && pincode == other.pincode;
 	}
 	public Address(int pincode, String city) {
 		super();
