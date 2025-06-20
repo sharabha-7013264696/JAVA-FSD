@@ -28,5 +28,6 @@
 	<classpathentry kind="src" path="MAP_PROGRAMS"/>
 	<classpathentry kind="src" path="TRY_CATCH_FINALLY"/>
 	<classpathentry kind="src" path="Streams"/>
+	<classpathentry kind="src" path="Streams_Map"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
