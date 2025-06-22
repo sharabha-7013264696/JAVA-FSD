@@ -9,9 +9,9 @@ public static void main(String[] args) {
 	Driver d4=new Driver(4,"sharabha","lorry",22000);
 	Driver d5=new Driver(5,"sharabha","car",203.700);
 	Driver d6=new Driver(6,"sharabha","auto",92700.50);
-	Driver d7=new Driver(7,"sharabha","car",12000);
+	Driver d7=new Driver(1,"sharabha","car",2000);
 	
-	ArrayList<Driver> l1=new ArrayList<Driver>();
+	List<Driver> l1=new ArrayList<Driver>();
 	l1.add(d1);
 	l1.add(d2);
 	l1.add(d3);
@@ -35,13 +35,13 @@ public static void main(String[] args) {
 	String t3=travel.RetrivebyDriverId(l1, 2);
 	System.out.println(t3);
 	
-	int t4=travel.RetriveCountOfDriver(l1, "car");
+	long t4=travel.RetriveCountOfDriver(l1, "car");
 	System.out.println(t4);
 	
-	ArrayList<String> f=travel.retriveDriver(l1,"car");
+	List<Driver> f=travel.retriveDriver(l1,"car");
 	System.out.println(f);
 	
-	double t5=travel.RetriveMaximumDistanceTravelledDriver(l1);
+	Driver t5=travel.RetriveMaximumDistanceTravelledDriver(l1);
 	System.out.println(t5);
 }
 }
