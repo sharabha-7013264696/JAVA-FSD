@@ -11,7 +11,7 @@ public static void main(String[] args) {
 	Driver d6=new Driver(6,"sharabha","auto",92700.50);
 	Driver d7=new Driver(7,"sharabha","car",12000);
 	
-	List<Driver> l1=new ArrayList<Driver>();
+	ArrayList<Driver> l1=new ArrayList<Driver>();
 	l1.add(d1);
 	l1.add(d2);
 	l1.add(d3);
@@ -22,12 +22,26 @@ public static void main(String[] args) {
 	
 	System.out.println("Drivers list "+l1);
 	
-	Travel travel=new Travel();
+	
 	
 	for(Driver h:l1) {
 		System.out.println("Drivers list in vertically  "+h);
 	}
 	
+	Travel travel=new Travel();
+	boolean t2=travel.isCarDriver(d1);
+	System.out.println(t2);
 	
+	String t3=travel.RetrivebyDriverId(l1, 2);
+	System.out.println(t3);
+	
+	int t4=travel.RetriveCountOfDriver(l1, "car");
+	System.out.println(t4);
+	
+	ArrayList<String> f=travel.retriveDriver(l1,"car");
+	System.out.println(f);
+	
+	double t5=travel.RetriveMaximumDistanceTravelledDriver(l1);
+	System.out.println(t5);
 }
 }
