@@ -29,5 +29,7 @@
 	<classpathentry kind="src" path="TRY_CATCH_FINALLY"/>
 	<classpathentry kind="src" path="Streams"/>
 	<classpathentry kind="src" path="Streams_Map"/>
+	<classpathentry kind="src" path="Reduce"/>
+	<classpathentry kind="src" path="Mini_Project_THOMAS_TRAVELS"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
