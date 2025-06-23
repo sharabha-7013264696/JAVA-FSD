@@ -6,5 +6,30 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Predefined"/>
+	<classpathentry kind="src" path="ObjectsUsage"/>
+	<classpathentry kind="src" path="MethodOverriding"/>
+	<classpathentry kind="src" path="NestedClass"/>
+	<classpathentry kind="src" path="Constructor"/>
+	<classpathentry kind="src" path="Inheritance"/>
+	<classpathentry kind="src" path="Inheritance-WithChildreferenceandchildobjects"/>
+	<classpathentry kind="src" path="Inheritance-WithParentreferenceandChildobjetcs"/>
+	<classpathentry kind="src" path="Abstraction"/>
+	<classpathentry kind="src" path="Encapsulation"/>
+	<classpathentry kind="src" path="Polymorphisim"/>
+	<classpathentry kind="src" path="Exception"/>
+	<classpathentry kind="src" path="MultiThreading"/>
+	<classpathentry kind="src" path="Even_Number_Check"/>
+	<classpathentry kind="src" path="PrimeNumberCheck"/>
+	<classpathentry kind="src" path="Fibonaaci"/>
+	<classpathentry kind="src" path="Palindrome"/>
+	<classpathentry kind="src" path="SumOfdigits"/>
+	<classpathentry kind="src" path="ArmstrongNumber"/>
+	<classpathentry kind="src" path="MAP_PROGRAMS"/>
+	<classpathentry kind="src" path="TRY_CATCH_FINALLY"/>
+	<classpathentry kind="src" path="Streams"/>
+	<classpathentry kind="src" path="Streams_Map"/>
+	<classpathentry kind="src" path="Reduce"/>
+	<classpathentry kind="src" path="Mini_Project_THOMAS_TRAVELS"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
