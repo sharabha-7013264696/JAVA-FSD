@@ -31,5 +31,8 @@
 	<classpathentry kind="src" path="Streams_Map"/>
 	<classpathentry kind="src" path="Reduce"/>
 	<classpathentry kind="src" path="Mini_Project_THOMAS_TRAVELS"/>
-	<classpathentry kind="output" path="bin"/>
+
+	<classpathentry kind="src" path="Static_And_NonStatic"/>
+
+
 </classpath>
