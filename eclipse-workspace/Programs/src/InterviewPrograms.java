@@ -1,12 +1,51 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class InterviewPrograms {
+	
+//	public static int binarysearch(int[] arr,int key) {
+//		int low=0;
+//		int high=arr.length-1;		
+//		while(low<=high) {
+//			int mid=low+high/2;
+//			if(arr[mid]==key) {
+//				return mid;
+//			}
+//			else if(arr[mid]<key) {
+//				low=mid+1;
+//			}
+//			else {
+//				high=mid-1;
+//			}
+//		}
+//		
+//		return -1;
+//	}
+	
+	public static boolean isPrime(int n) {
+		
+		if(n<=1) {
+			return false;
+		}
+		else {
+			for(int i=2;i<Math.sqrt(n);i++) {
+				if(n%i==0) {
+					
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	
+
 	public static void main(String[] args) {
 		//how to check if string contains only digits
 		
@@ -123,12 +162,90 @@ public class InterviewPrograms {
 //			
 //		}
 		
-		String str1 = "Hello";
-		 String str2 = str1;
-		 str1 = str1 + " World";
-		 System.out.println("str1: " + str1);
-		 System.out.println("str2: " + str2);
-		 System.out.println("Is String immutable: " + !str1.equals(str2));
+		//how could you prove that strings are immutable both literals and objects 
+		
+//		String str1="hello";
+//		String str2=str1;
+//		str1=str1.concat(str2); // new string object is created 
+//		System.out.println(str1);
+//		System.out.println(str2);
+//		System.out.println("strings are immutable"+" "+str1.equals(str2));
+//		
+//		String str3=new String("heloo1");
+//		String str4=str3;
+//		str3.concat("world4");  // will create a new string object but no variable to catch it so this will be discarded
+//		System.out.println(str3);
+//		System.out.println(str4);
+//		System.out.println("strings are mutable"+" "+str3.equals(str4));
+//		
+//		String str5=new String("helggoo1");
+//		String str6=str5;
+//		str5=str5.concat("worlggd4");  // will create a new string object but no variable to catch it so this will be discarded
+//		System.out.println(str5);
+//		System.out.println(str6);
+//		System.out.println("strings are immutable"+" "+str5.equals(str6));
+//		
+//		StringBuffer sb1=new StringBuffer("loll");
+//		StringBuffer sb2=sb1;
+//		sb1.append("kakaa");
+//		System.out.println(sb1);
+//		System.out.println(sb2);
+//		System.out.println("strings are mutable by string buffers"+" "+sb1.equals(sb2));
+ 
+		// sort hashmap by key 
+		
+//		Map<String,Integer> map=new HashMap<>();
+//		map.put("One", 1);
+//		 map.put("Three", 3);
+//		 map.put("Two", 2);
+//		 
+//		 Map<String,Integer> map1=map.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(e->e.getKey(),e->e.getValue()));
+//		 System.out.println(map1);
+//		 // sort hashmap by value
+//		 Map<String,Integer> map2=new HashMap<>();
+//			map2.put("One", 1);
+//			 map2.put("Three", 3);
+//			 map2.put("Two", 2);
+//			 
+//			 Map<String,Integer> map3=map2.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(e->e.getKey(),e->e.getValue()));
+//			 System.out.println(map3);
+		
+		// binary search in java
+		
+//		int[] arr= {4,8,1,3};
+//		int key=8;
+//		int result=InterviewPrograms.binarysearch(arr,key);
+//		if(result==-1) {
+//			System.out.println("not found");
+//			
+//		}
+//		else {
+//			System.out.println("found");
+//		}
+		 
+		// if a vowel is present in string
+		
+//		Scanner sc=new Scanner(System.in);
+//		System.out.println("Enter string");
+//		String input=sc.nextLine();
+//		boolean isVowel=false;
+//		for(int i=0;i<input.length();i++) {
+//			char ch=Character.toLowerCase(input.charAt(i));
+//			if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch =='u') {
+//				isVowel=true;
+//				break;
+//				
+//			}
+//		}
+//		System.out.println("check string has vowel are not"+" "+isVowel);
+		
+		//check prime or not
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number");
+		int b=sc.nextInt();
+		boolean result=isPrime(b);
+		System.out.println(result);
+			
 		 
 	}
 
