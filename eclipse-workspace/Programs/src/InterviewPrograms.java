@@ -4,8 +4,10 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class InterviewPrograms {
@@ -29,21 +31,21 @@ public class InterviewPrograms {
 //		return -1;
 //	}
 	
-	public static boolean isPrime(int n) {
-		
-		if(n<=1) {
-			return false;
-		}
-		else {
-			for(int i=2;i<Math.sqrt(n);i++) {
-				if(n%i==0) {
-					
-					return false;
-				}
-			}
-		}
-		return true;
-	}
+//	public static boolean isPrime(int n) {
+//		
+//		if(n<=1) {
+//			return false;
+//		}
+//		else {
+//			for(int i=2;i<Math.sqrt(n);i++) {
+//				if(n%i==0) {
+//					
+//					return false;
+//				}
+//			}
+//		}
+//		return true;
+//	}
 	
 
 	public static void main(String[] args) {
@@ -240,13 +242,86 @@ public class InterviewPrograms {
 //		System.out.println("check string has vowel are not"+" "+isVowel);
 		
 		//check prime or not
+		
+//		Scanner sc=new Scanner(System.in);
+//		System.out.println("Enter number");
+//		int b=sc.nextInt();
+//		boolean result=isPrime(b);
+//		System.out.println(result);
+		
+		//factorial of a number
+		
+//		Scanner sc=new Scanner(System.in);
+//		System.out.println("enter number");
+//		int h=sc.nextInt();
+//		int fac=1;
+//		for(int i=1;i<=h;i++) {
+//			fac=fac*i;
+//		}
+//			System.out.println(fac);
+		
+		// reverse a string
+		
+//		 Scanner sc=new Scanner(System.in);
+//		 System.out.println("enter string");
+//		 String s=sc.nextLine();
+//		 String rs="";
+//		 for(int i=s.length()-1;i>=0;i--) {
+//			 rs+=s.charAt(i);
+//		 }
+//		 System.out.println(rs);
+		
+		//palindrome
+		
+//		 Scanner sc=new Scanner(System.in);
+//		 System.out.println("enter string");
+//		 String s=sc.nextLine();
+//		 String rs="";
+//		 for(int i=s.length()-1;i>=0;i--) {
+//			 rs+=s.charAt(i);
+//		 }
+//		 System.out.println(rs);
+//		 boolean resultPalindrome=s.equals(rs);
+//		 System.out.println(resultPalindrome);
+		
+		//occurance of characters in a string
+		
+//		Scanner sc=new Scanner(System.in);
+//		System.out.println("enter string");
+//     	String s=sc.nextLine();
+//		Map<Character,Long> map=s.chars()
+//				.mapToObj(c->(char)c)
+//				.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+//		
+//		map.entrySet().stream().forEach(e->System.out.println(e.getKey()+":"+e.getValue()));
+		
+      // occurance for particular character	
+		
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter number");
-		int b=sc.nextInt();
-		boolean result=isPrime(b);
-		System.out.println(result);
-			
-		 
+		System.out.println("enter string");
+		
+		System.out.println("enter character");
+     	String s=sc.nextLine();
+     	char ch=sc.next().charAt(0);
+		Map<Character,Long> map=s.chars()
+				.mapToObj(c->(char)c)
+				.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+//		Optional<Long> l=Optional.ofNullable(map.get(ch));
+//		System.out.println(l);
+//		String result=l.map(e->"found "+e).orElse("not found");
+//		System.out.println(result);
+		
+		List l2=map.entrySet().stream().filter(e->e.getKey().equals(ch)).map(e->e.getValue()).collect(Collectors.toList());
+		Optional<String> ok=Optional.empty();
+		ok.ifPresentOrElse(e->System.out.println(e), System.out.println("not found"));
+		
+		
+		//map.entrySet().stream().filter(e->e.getKey().equals(ch)).forEach(e->System.out.println(e.getValue()));
+	//map.entrySet().stream().filter(e->e.getValue()==1).forEach(e->System.out.println(e.getKey()));
+		
 	}
+	
+	
 
 }
