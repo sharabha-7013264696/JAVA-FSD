@@ -297,28 +297,94 @@ public class InterviewPrograms {
 		
       // occurance for particular character	
 		
-		Scanner sc=new Scanner(System.in);
-		System.out.println("enter string");
-		
-		System.out.println("enter character");
-     	String s=sc.nextLine();
-     	char ch=sc.next().charAt(0);
-		Map<Character,Long> map=s.chars()
-				.mapToObj(c->(char)c)
-				.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+//		Scanner sc=new Scanner(System.in);
+//		System.out.println("enter string");
+//		
+//		System.out.println("enter character");
+//     	String s=sc.nextLine();
+//     	char ch=sc.next().charAt(0);
+//		Map<Character,Long> map=s.chars()
+//				.mapToObj(c->(char)c)
+//				.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		
 //		Optional<Long> l=Optional.ofNullable(map.get(ch));
 //		System.out.println(l);
 //		String result=l.map(e->"found "+e).orElse("not found");
 //		System.out.println(result);
 		
-		List l2=map.entrySet().stream().filter(e->e.getKey().equals(ch)).map(e->e.getValue()).collect(Collectors.toList());
-		Optional<String> ok=Optional.empty();
-		ok.ifPresentOrElse(e->System.out.println(e), System.out.println("not found"));
+//		List l2=map.entrySet().stream().filter(e->e.getKey().equals(ch)).map(e->e.getValue()).collect(Collectors.toList());
+//		Optional<String> ok=Optional.empty();
+//		ok.ifPresentOrElse(e->System.out.println(e), System.out.println("not found"));
 		
 		
 		//map.entrySet().stream().filter(e->e.getKey().equals(ch)).forEach(e->System.out.println(e.getValue()));
 	//map.entrySet().stream().filter(e->e.getValue()==1).forEach(e->System.out.println(e.getKey()));
+		  
+		// check anagram or not
+		
+//		Scanner sc=new Scanner(System.in);
+//		System.out.println("enter string");
+//		String s1=sc.nextLine();
+//		String s2=sc.nextLine();
+//		
+//		char[] c1=s1.toCharArray();
+//		System.out.println(Arrays.toString(c1));
+//		char[] c2=s2.toCharArray();
+//		Arrays.sort(c1);
+//		Arrays.sort(c2);
+//		boolean nj=c1.equals(c2);
+//		System.out.println(nj);
+		
+		//count vowels and consonents in a string
+		
+//		Scanner sc =new Scanner(System.in);
+//		String h=sc.nextLine();
+//		int vowels=0;
+//		int consonants=0;
+//		for(int i=0;i<h.length();i++) {
+//			char ch=Character.toLowerCase(h.charAt(i));
+//			if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch ==
+//					 'u'){
+//					 vowels++;
+//					 } else if (ch >= 'a' && ch <= 'z') {
+//					 consonants++;
+//					 }
+//					 }
+//					 System.out.println("Vowels: " + vowels + ", Consonants: " +
+//					 consonants);
+		
+		
+		//How do you get the matching elements in an integer array?
+		
+//		int a[]= {2,1,3,4,1};
+//		int b[]= {5,4,4,57};
+//		Set<Integer> sh=new HashSet<>();
+//		for(int num:a) {
+//			sh.add(num);
+//		}
+//		
+//		for(int num2:b) {
+//			if(sh.contains(num2)) {
+//				System.out.println(num2);
+//			}
+//		}
+		
+		//reverse an array
+		int a[]= {5,3,4,8,9};
+		
+		int start=0;
+		int end=a.length-1;
+		while(start<end) {
+			int temp=a[start];
+			a[start]=a[end];
+			a[end]=temp;
+			start++;
+			end--;
+		}
+		System.out.println(Arrays.toString(a));
+		
+		
+	
 		
 	}
 	
