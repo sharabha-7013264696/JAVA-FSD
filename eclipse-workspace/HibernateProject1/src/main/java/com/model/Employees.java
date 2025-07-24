@@ -22,6 +22,12 @@ public class Employees {
 		this.name = name;
 		this.salary = salary;
 	}
+	public Employees(int id, String name, Double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
 	@Override
 	public String toString() {
 		return "Employees [id=" + id + ", name=" + name + ", salary=" + salary + "]";
