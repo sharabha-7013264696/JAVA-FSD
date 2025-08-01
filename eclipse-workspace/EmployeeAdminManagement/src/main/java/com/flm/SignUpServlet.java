@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,7 +43,9 @@ public class SignUpServlet extends HttpServlet {
 				statement.setString(1,email);
 				statement.setString(2,password);
 				statement.executeUpdate();
-			} catch (SQLException e) {
+				RequestDispatcher requestDispatcher=request.getRequestDispatcher("index.html");
+				requestDispatcher.forward(request,response);
+			} catch (SQLException | ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
