@@ -1,4 +1,4 @@
-package com.flm;
+package com.flm.Servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.flm.dao.UserDao;
+import com.flm.model.User;
 import com.flm.utils.Constants;
 import com.flm.utils.DBConnection;
 
@@ -29,23 +31,25 @@ public class SignUpServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)  {
 		// TODO Auto-generated method stub
 
        String email=request.getParameter("email");
        String password=request.getParameter("password");
        String confirmPassword=request.getParameter("confirmpassword");
-       DBConnection dbconnection=new DBConnection();
+       User user=new User(email,password);
+       UserDao du=new UserDao();
+       du.saveUser(user);
+       
 		
 			try {
-				Connection connection = dbconnection.getConnection();
-				PreparedStatement statement=connection.prepareStatement(Constants.InsertUser);
-				statement.setString(1,email);
-				statement.setString(2,password);
-				statement.executeUpdate();
+				
 				RequestDispatcher requestDispatcher=request.getRequestDispatcher("index.html");
 				requestDispatcher.forward(request,response);
-			} catch (SQLException | ClassNotFoundException e) {
+			} catch (ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
