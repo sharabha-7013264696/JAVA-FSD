@@ -15,15 +15,16 @@ import com.flm.utils.Constants;
 import com.flm.utils.DBConnection;
 
 public class EmployeeDao {
-	public void saveUser(User user) {
+	public List<Employee> getAllEmployees() {
 		Connection connection;
 		DBConnection dbconnection=new DBConnection();
+		List<Employee> l1=new ArrayList<Employee>();
 		try {
 			connection = dbconnection.getConnection();
 			PreparedStatement statement=connection.prepareStatement(Constants.getAllEmployees);
 			
 			ResultSet rs=statement.executeQuery();
-			List<Employee> l1=new ArrayList<Employee>();
+			
 			while(rs.next()) {
 				int empId=rs.getInt(1);
 				String name=rs.getString(2);
@@ -35,10 +36,12 @@ public class EmployeeDao {
 				l1.add(emp);
 				
 			}
+			return l1;
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return l1;
 		
 	}
 	

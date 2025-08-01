@@ -8,9 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.flm.dao.UserDao;
 import com.flm.model.User;
+import com.mysql.cj.xdevapi.Session;
+
 
 /**
  * Servlet implementation class LoginServlet
@@ -46,7 +49,10 @@ public class LoginServlet extends HttpServlet {
 		UserDao ud=new UserDao();
 		boolean isValid=ud.validateUser(user);
 		if(isValid) {
-			RequestDispatcher requestDispatcher=request.getRequestDispatcher("home.jsp");
+			HttpSession session=request.getSession();
+			String name=user.getEmail().split("@")[0];
+			session.setAttribute("email",name);
+			RequestDispatcher requestDispatcher=request.getRequestDispatcher("EmployeesServlet");
 			requestDispatcher.forward(request,response);
 		}
 		else {
